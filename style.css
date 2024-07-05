@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lora', serif;
+    background-color: #F4F4F4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo h1 {
+    font-size: 24px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+nav ul li:hover {
+    text-decoration: underline;
+}
+.searchBar {
+    display: flex;
+}
+.searchBar input {
+    width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 2px;
+}
+.searchBar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.searchBar button:hover {
+    background-color: #444;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+.feature-article {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.feature-article img {
+    width: 100%;
+    height: auto;
+}
+.feature-article h2 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.card p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

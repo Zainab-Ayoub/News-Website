@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Daily News</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li id="home" onclick="navClick('')">Home</li>
+                    <li id="politics" onclick="navClick('politics')">Politics</li>
+                    <li id="sports" onclick="navClick('sports')">Sports</li>
+                    <li id="technology" onclick="navClick('technology')">Technology</li>
+                </ul>
+            </nav>
+            <div class="searchBar">
+                <input type="text" placeholder="Search Here..." id="inputData">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="feature-article" id="feature-article">
+                <!-- Feature article will be inserted here -->
+            </div>
+            <div class="articles" id="articles">
+                <!-- Article cards will be inserted here -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Daily News</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
