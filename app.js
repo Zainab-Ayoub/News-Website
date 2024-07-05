@@ -10,7 +10,7 @@ const getData = async (input = '', category = '') => {
         if (input) apiUrl += `&q=${input}`;
         if (category) apiUrl += `&category=${category}`;
 
-        console.log(`Fetching data from: ${apiUrl}`); // Log the API URL
+        console.log(`Fetching data from: ${apiUrl}`); 
         let encodedUrl = encodeURIComponent(apiUrl);
         let res = await fetch(`https://api.allorigins.win/raw?url=${encodedUrl}`);
         if (!res.ok) {
@@ -18,7 +18,7 @@ const getData = async (input = '', category = '') => {
         }
         jsonData = await res.json();
         
-        console.log('API response:', jsonData); // Log the API response
+        console.log('API response:', jsonData); 
 
         if (!jsonData.articles || jsonData.articles.length === 0) {
             throw new Error('No articles found in response');
@@ -31,10 +31,9 @@ const getData = async (input = '', category = '') => {
 };
 
 const displayArticles = (articles) => {
-    // Clear previous content
+   
     mainContent.innerHTML = "";
 
-    // Filter out articles with urlToImage as 'removed' or not available
     let filteredArticles = articles.filter(article => article.urlToImage && article.urlToImage !== 'removed');
 
     if (filteredArticles.length > 0) {
@@ -49,10 +48,10 @@ const createArticleCard = (article) => {
     let card = document.createElement("div");
     card.classList.add("card");
 
-    // Check if urlToImage is available and not 'removed'
+
     let imageSrc = article.urlToImage && article.urlToImage !== 'removed' ? article.urlToImage : 'placeholder-image-url'; // Replace 'placeholder-image-url' with a fallback image URL
 
-    // Check if description is available
+   
     let description = article.description ? article.description : 'No description available';
 
     card.innerHTML = `
@@ -68,7 +67,7 @@ const createArticleCard = (article) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Ensure the DOM is fully loaded before calling getData
+    
     getData();
 });
 
